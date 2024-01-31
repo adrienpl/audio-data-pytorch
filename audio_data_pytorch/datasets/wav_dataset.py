@@ -128,7 +128,7 @@ class WAVDataset(Dataset):
             if self.with_ID3:
                 return waveform, tag
 
-            return waveform
+            return waveform, sample_rate
 
     def __len__(self) -> int:
         return len(self.wavs)
